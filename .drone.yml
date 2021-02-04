@@ -1,0 +1,19 @@
+kind: pipeline
+type: docker
+name: default
+
+steps:
+- name: build
+  image: golang:1.13
+  commands:
+  - echo world
+- name: publish
+  image: plugins/docker
+  settings:
+    username: 
+      from_secret: kjntestdrone2
+    password:
+      from_secret: kjntestdrone2
+    repo: nancom21/kjn-test-drone2
+    auto_tag: true
+    auto_tag_suffix: drone-build
