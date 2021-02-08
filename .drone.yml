@@ -3,6 +3,10 @@ type: docker
 name: default
 
 steps:
+- name: test
+  image: nginx:latest
+  commands:
+  - apt get
 - name: build
   image: golang:1.13
   commands:
