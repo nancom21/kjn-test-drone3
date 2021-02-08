@@ -11,9 +11,9 @@ steps:
   image: plugins/docker
   settings:
     username: 
-      from_secret: kjntestdrone2
+      from_secret: docker_username
     password:
-      from_secret: kjntestdrone2
-    repo: nancom21/kjn-test-drone2
+      from_secret: docker_password
+    repo: nancom21/kjn-test-drone3
     auto_tag: true
     auto_tag_suffix: drone-build
