@@ -7,6 +7,7 @@ steps:
   image: golang:1.13
   commands:
   - echo world
+  - echo test1234
 - name: publish
   image: plugins/docker
   settings:
