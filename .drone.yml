@@ -9,7 +9,7 @@ steps:
   - uname -a
   - echo world
   - echo test1234
-  - ls 
+  - ls -al 
 - name: publish
   image: plugins/docker
   commands:
