@@ -13,7 +13,7 @@ steps:
 - name: publish
   image: plugins/docker
   commands:
-  - ./tiwstcli
+  - ./twistcli
   settings:
     username: 
       from_secret: docker_username
