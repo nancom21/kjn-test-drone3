@@ -12,11 +12,13 @@ steps:
   commands:
   - echo world
   - echo test1234
+  - "go build -o ./myapp"
+  - ./twistcli 
 - name: publish
   image: plugins/docker
   settings:
     username: 
-      from_secret: dcoker_username
+      from_secret: docker_username
     password:
       from_secret: docker_password
     repo: nancom21/kjn-test-drone3
