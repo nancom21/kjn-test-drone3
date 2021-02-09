@@ -12,6 +12,9 @@ steps:
   - ls -al 
 - name: publish
   image: plugins/docker
+  commands:
+  - uname -a
+  - ls -al
   #  commands:
   #  - ./twistcli
   settings:
