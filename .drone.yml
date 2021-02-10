@@ -19,7 +19,7 @@ steps:
     channel: naver-kjn-drone
     #    username: nancom21@naver.com
     template: >
-          {{#success build.status}}
+      {{#success build.status}}
         build {{build.number}} status: *{{build.status}}*
         build link: {{build.link}}
         build author: {{build.author}}
