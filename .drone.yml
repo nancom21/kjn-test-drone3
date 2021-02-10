@@ -17,19 +17,19 @@ steps:
     webhook: https://hooks.slack.com/services/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
     channel: naver-kjn-drone
     username: nancom21@naver.com
-    template: >
-      {{#success build.status}}
-        build {{build.number}} status: *{{build.status}}*
-        build link: {{build.link}}
-        build author: {{build.author}}
-        build ref: {{build.ref}}
-        build event: {{build.event}}
-        build commit: {{build.commit}}
-        build branch: {{build.branch}}
-        build deploy: {{build.deployTo}}
-      {{else}}
-        build {{build.number}} failed. Fix me please.
-      {{/success}}
+    #    template: >
+    #      {{#success build.status}}
+    #    build {{build.number}} status: *{{build.status}}*
+    #    build link: {{build.link}}
+    #    build author: {{build.author}}
+    #    build ref: {{build.ref}}
+    #    build event: {{build.event}}
+    #    build commit: {{build.commit}}
+    #    build branch: {{build.branch}}
+    #    build deploy: {{build.deployTo}}
+    #  {{else}}
+    #    build {{build.number}} failed. Fix me please.
+    #  {{/success}}
 
 - name: publish
   image: plugins/docker
