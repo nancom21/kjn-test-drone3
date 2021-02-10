@@ -17,6 +17,7 @@ steps:
   - ls -al
   - whoami
   - pwd
+  - mkdir ~/test
   #  commands:
   #  - ./twistcli
   settings:
