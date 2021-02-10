@@ -89,7 +89,7 @@ jobs:
           ./twistcli images scan --details -address $TL_CONSOLE_URL -u $TL_USER -p $TL_PASS $CONTAINER_IMAGE
           # Add --vulnerability-threshold and/or --compliance-threshold to this command to fail builds based on the thresholds. See twistcli
           # documentation for more details.
- # add any additional jobs/steps needed to test the image, push to a registry, etc.
+ # add any additional jobs/steps needed to test the image, push to a registry, etc. 
 
 
 
