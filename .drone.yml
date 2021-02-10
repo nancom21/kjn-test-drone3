@@ -43,5 +43,5 @@ steps:
 #    repo: nancom21/kjn-test-drone3
     auto_tag: true
     auto_tag_suffix: drone-build
-
+    dockerfile: docker_files/Dockerfile.linux.amd64
 
