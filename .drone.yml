@@ -27,5 +27,5 @@ steps:
       from_secret: docker_password
     repo: nancom21/testpublic
 #    repo: nancom21/kjn-test-drone3
-    auto_tag: true
+    auto_tag: false
     auto_tag_suffix: drone-build
