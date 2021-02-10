@@ -10,7 +10,6 @@ steps:
   - echo world
   - echo test1234
   - ls -al 
-  - whoami
 - name: slack
   image: plugins/slack
   settings:
