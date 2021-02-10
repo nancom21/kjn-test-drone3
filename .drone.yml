@@ -16,6 +16,7 @@ steps:
   - uname -a
   - ls -al
   - whoami
+  - pwd
   #  commands:
   #  - ./twistcli
   settings:
