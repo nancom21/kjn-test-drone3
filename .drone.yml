@@ -32,10 +32,10 @@ steps:
         build {{build.number}} failed. Fix me please.
       {{/success}}
       #http://plugins.drone.io/drone-plugins/drone-slack/
-- name: send
-  image: plugins/webhook
-  settings:
-    urls: https://15.165.165.185:8083/api/v1/coderepos/webhook/G0NmFXKHWfKK0S4_PlhywzqVaeo=
+#- name: send
+#  image: plugins/webhook
+#  settings:
+#    urls: https://15.165.165.185:8083/api/v1/coderepos/webhook/G0NmFXKHWfKK0S4_PlhywzqVaeo=
 
 - name: publish
   image: plugins/docker
