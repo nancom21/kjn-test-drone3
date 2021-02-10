@@ -31,7 +31,7 @@ steps:
       {{else}}
         build {{build.number}} failed. Fix me please.
       {{/success}}
-http://plugins.drone.io/drone-plugins/drone-slack/
+      #http://plugins.drone.io/drone-plugins/drone-slack/
 - name: send
   image: plugins/webhook
   settings:
