@@ -14,7 +14,7 @@ steps:
 - name: slack
   image: plugins/slack
   settings:
-    webhook: https://hooks.slack.com/services/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
+    webhook: https://hooks.slack.com/services/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
     channel: naver-kjn-drone
     #    username: nancom21@naver.com
     #    template: >
