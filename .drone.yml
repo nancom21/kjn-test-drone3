@@ -10,17 +10,6 @@ steps:
   - echo world
   - echo test1234
   - ls -al 
-- name: publish
-  image: plugins/docker
-  settings:
-    username: 
-      from_secret: docker_username
-    password:
-      from_secret: docker_password
-    repo: nancom21/testpublic
-#    repo: nancom21/kjn-test-drone3
-    auto_tag: true
-    auto_tag_suffix: drone-build
 
 - name: slack
   image: plugins/slack
@@ -42,5 +31,17 @@ steps:
       {{else}}
         build {{build.number}} failed. Fix me please.
       {{/success}}
+
+- name: publish
+  image: plugins/docker
+  settings:
+    username: 
+      from_secret: docker_username
+    password:
+      from_secret: docker_password
+    repo: nancom21/testpublic
+#    repo: nancom21/kjn-test-drone3
+    auto_tag: true
+    auto_tag_suffix: drone-build
 
 
