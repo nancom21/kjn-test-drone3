@@ -15,6 +15,7 @@ steps:
   commands:
   - uname -a
   - ls -al
+  - whoami
   #  commands:
   #  - ./twistcli
   settings:
