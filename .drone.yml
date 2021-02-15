@@ -4,6 +4,10 @@ name: default
 
 steps:
 - name: build
+  environment:
+    TL_USER: twistcli
+    TL_PASS: twistcli
+    TL_CONSOLE_URL: https://15.165.165.185:8083
   image: golang:1.13
   commands:
   - uname -a
@@ -11,6 +15,10 @@ steps:
   - echo test1234
   - ls -al 
   - whoami
+  - curl -k -u $TL_USER:$TL_PASS --output ./twistcli https://15.165.165.185:8083/api/v1/util/twistcli
+  - sudo chmod a+x ./twistcli
+  - echo ===== Twistcli ready =====
+  - ./twistcli --version
 - name: slack
   image: plugins/slack
   settings:
