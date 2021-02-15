@@ -58,6 +58,12 @@ steps:
     auto_tag_suffix: drone-build
 #    dockerfile: docker_files/Dockerfile.linux.amd64
 
+ - name: Scan the image
+      commands:
+          ls -an
+          uname -a   
+          echo ===== Scanning Image =====
+          ./twistcli images scan -address $TL_CONSOLE_URL -u $TL_USER -p $TL_PASS --containerized $CONTAINER_IMAGE
 
 
 
