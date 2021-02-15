@@ -14,12 +14,8 @@ steps:
   - ls -al 
   - whoami
   
-  #- curl -k -u $TL_USER:$TL_PASS --output ./twistcli https://15.165.165.185:8083/api/v1/util/twistcli
-  #- chmod a+x ./twistcli
-  #- echo ===== Twistcli ready to scan ${DRONE_BRANCH//\//-}-${DRONE_COMMIT_SHA:0:8} =====
-  # - ./twistcli images scan -address https://15.165.165.185:8083 -u twistcli -p twistcli --containerized --details ${DRONE_BRANCH//\//-}-${DRONE_COMMIT_SHA:0:8}
-
-- name: slack
+  
+  - name: slack
   image: plugins/slack
   settings:
     webhook: 
@@ -44,8 +40,6 @@ steps:
 #  image: plugins/webhook
 #  settings:
 #    urls: https://15.165.165.185:8083/api/v1/coderepos/webhook/G0NmFXKHWfKK0S4_PlhywzqVaeo=
-
-
 - name: publish
   image: plugins/docker
   settings:
@@ -57,10 +51,4 @@ steps:
 #    repo: nancom21/kjn-test-drone3
     auto_tag: true
     auto_tag_suffix: drone-build
-   dockerfile: docker_files/Dockerfile.linux.amd64
-
-
-
-
-
-
+    dockerfile: docker_files/Dockerfile.linux.amd64
