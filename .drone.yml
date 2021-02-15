@@ -16,7 +16,7 @@ steps:
   - ls -al 
   - whoami
   - curl -k -u $TL_USER:$TL_PASS --output ./twistcli https://15.165.165.185:8083/api/v1/util/twistcli
-  - sudo chmod a+x ./twistcli
+  - chmod a+x ./twistcli
   - echo ===== Twistcli ready =====
   - ./twistcli --version
 - name: slack
