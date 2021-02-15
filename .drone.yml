@@ -45,11 +45,6 @@ steps:
 #  image: plugins/webhook
 #  settings:
 #    urls: https://15.165.165.185:8083/api/v1/coderepos/webhook/G0NmFXKHWfKK0S4_PlhywzqVaeo=
-- name: scanning
-  image: debian:latest
-  commands: 
-  - ./twistcli --version
-  - docker images
 
 - name: publish
   image: plugins/docker
@@ -64,4 +59,8 @@ steps:
     auto_tag_suffix: drone-build
     dockerfile: docker_files/Dockerfile.linux.amd64
 
-
+- name: scanning
+  image: debian:latest
+  commands: 
+  - ./twistcli --version
+  - docker images
