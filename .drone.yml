@@ -49,6 +49,7 @@ steps:
   image: debian:latest
   commands: 
   - ./twistcli --version
+  - docker images
 
 - name: publish
   image: plugins/docker
