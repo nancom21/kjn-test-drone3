@@ -25,6 +25,7 @@ jobs:
         curl -k -u $TL_USER:$TL_PASS --output ./twistcli https://15.165.165.185:8083/api/v1/util/twistcli
         # ...and ensure it's executable.
         sudo chmod a+x ./twistcli
+        echo ===== Twistcli ready =====
      
      # - name: Build and tag the image
      # run: docker build -t $CONTAINER_IMAGE .
