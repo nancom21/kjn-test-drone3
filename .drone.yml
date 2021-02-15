@@ -19,6 +19,7 @@ steps:
   - chmod a+x ./twistcli
   - echo ===== Twistcli ready =====
   - ./twistcli --version
+  
 - name: slack
   image: plugins/slack
   settings:
@@ -44,6 +45,9 @@ steps:
 #  image: plugins/webhook
 #  settings:
 #    urls: https://15.165.165.185:8083/api/v1/coderepos/webhook/G0NmFXKHWfKK0S4_PlhywzqVaeo=
+- name: scanning
+  commands: 
+  - ./twistcli --version
 
 - name: publish
   image: plugins/docker
@@ -57,3 +61,5 @@ steps:
     auto_tag: true
     auto_tag_suffix: drone-build
     dockerfile: docker_files/Dockerfile.linux.amd64
+
+
