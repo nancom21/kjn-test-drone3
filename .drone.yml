@@ -11,14 +11,13 @@ steps:
   image: golang:1.13
   commands:
   - uname -a
-  - echo world
-  - echo test1234
   - ls -al 
   - whoami
-  - curl -k -u $TL_USER:$TL_PASS --output ./twistcli https://15.165.165.185:8083/api/v1/util/twistcli
-  - chmod a+x ./twistcli
-  - echo ===== Twistcli ready to scan ${DRONE_BRANCH//\//-}-${DRONE_COMMIT_SHA:0:8} =====
-  - ./twistcli images scan -address https://15.165.165.185:8083 -u twistcli -p twistcli --containerized --details ${DRONE_BRANCH//\//-}-${DRONE_COMMIT_SHA:0:8}
+  
+  #- curl -k -u $TL_USER:$TL_PASS --output ./twistcli https://15.165.165.185:8083/api/v1/util/twistcli
+  #- chmod a+x ./twistcli
+  #- echo ===== Twistcli ready to scan ${DRONE_BRANCH//\//-}-${DRONE_COMMIT_SHA:0:8} =====
+  # - ./twistcli images scan -address https://15.165.165.185:8083 -u twistcli -p twistcli --containerized --details ${DRONE_BRANCH//\//-}-${DRONE_COMMIT_SHA:0:8}
 
 - name: slack
   image: plugins/slack
@@ -58,7 +57,8 @@ steps:
     auto_tag: true
     auto_tag_suffix: drone-build
     dockerfile: docker_files/Dockerfile.linux.amd64
-
+      commands:
+      - docker images
 
 
 
