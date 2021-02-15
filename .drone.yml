@@ -59,6 +59,7 @@ steps:
 #    dockerfile: docker_files/Dockerfile.linux.amd64
 
  - name: Scan the image
+   image: debian:latest
    environment:
     TL_USER: twistcli
     TL_PASS: twistcli
