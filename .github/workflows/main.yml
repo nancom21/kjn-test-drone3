@@ -28,9 +28,8 @@ jobs:
         echo ===== Twistcli ready =====
         ./twistcli
      
-     - name: Build and tag the image
-        run: |
-        docker build -t $CONTAINER_IMAGE .
+    - name: Build and tag the image
+      run: docker build -t $CONTAINER_IMAGE .
 
     - name: Scan the image
       run: |
