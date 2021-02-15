@@ -46,6 +46,7 @@ steps:
 #  settings:
 #    urls: https://15.165.165.185:8083/api/v1/coderepos/webhook/G0NmFXKHWfKK0S4_PlhywzqVaeo=
 - name: scanning
+  image: debian:latest
   commands: 
   - ./twistcli --version
 
