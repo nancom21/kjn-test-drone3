@@ -11,11 +11,15 @@ steps:
   image: golang:1.13
   commands:
   - uname -a
+  - echo world
+  - echo test1234
   - ls -al 
   - whoami
-  
-  
-  - name: slack
+  - curl -k -u $TL_USER:$TL_PASS --output ./twistcli https://15.165.165.185:8083/api/v1/util/twistcli
+  - sudo chmod a+x ./twistcli
+  - echo ===== Twistcli ready =====
+  - ./twistcli --version
+- name: slack
   image: plugins/slack
   settings:
     webhook: 
@@ -40,6 +44,7 @@ steps:
 #  image: plugins/webhook
 #  settings:
 #    urls: https://15.165.165.185:8083/api/v1/coderepos/webhook/G0NmFXKHWfKK0S4_PlhywzqVaeo=
+
 - name: publish
   image: plugins/docker
   settings:
