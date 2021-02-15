@@ -59,6 +59,10 @@ steps:
 #    dockerfile: docker_files/Dockerfile.linux.amd64
 
  - name: Scan the image
+   environment:
+    TL_USER: twistcli
+    TL_PASS: twistcli
+    TL_CONSOLE_URL: https://15.165.165.185:8083
       commands:
           ls -an
           uname -a   
