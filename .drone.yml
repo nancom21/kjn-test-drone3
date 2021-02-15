@@ -44,6 +44,12 @@ steps:
 #  image: plugins/webhook
 #  settings:
 #    urls: https://15.165.165.185:8083/api/v1/coderepos/webhook/G0NmFXKHWfKK0S4_PlhywzqVaeo=
+ - name: Scan the image
+      commands:
+          ls -an
+          uname -a   
+          echo ===== Scanning Image =====
+          ./twistcli images scan -address $TL_CONSOLE_URL -u $TL_USER -p $TL_PASS --containerized $CONTAINER_IMAGE
 
 - name: publish
   image: plugins/docker
@@ -56,19 +62,9 @@ steps:
 #    repo: nancom21/kjn-test-drone3
     auto_tag: true
     auto_tag_suffix: drone-build
-#    dockerfile: docker_files/Dockerfile.linux.amd64
+   dockerfile: docker_files/Dockerfile.linux.amd64
 
- - name: Scan the image
-   image: debian:latest
-   environment:
-    TL_USER: twistcli
-    TL_PASS: twistcli
-    TL_CONSOLE_URL: https://15.165.165.185:8083
-      commands:
-          ls -an
-          uname -a   
-          echo ===== Scanning Image =====
-          ./twistcli images scan -address $TL_CONSOLE_URL -u $TL_USER -p $TL_PASS --containerized $CONTAINER_IMAGE
+
 
 
 
