@@ -9,7 +9,7 @@ env:
   TL_PASS: ${{ secrets.TL_PASS }}
   # The base URL for the Console -- http://console.<my_company>.com:8083 -- without a trailing /
   TL_CONSOLE_URL: https://15.165.165.185:8083
-  CONTAINER_IMAGE: name/tag:${{ github.sha }}
+  # CONTAINER_IMAGE: name/tag:${{ github.sha }}
 
 jobs:
   build-and-scan:
