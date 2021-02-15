@@ -26,7 +26,7 @@ jobs:
         # ...and ensure it's executable.
         sudo chmod a+x ./twistcli
      
-    - name: Build and tag the image
+     # - name: Build and tag the image
      # run: docker build -t $CONTAINER_IMAGE .
 
     - name: Scan the image
