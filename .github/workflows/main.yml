@@ -34,7 +34,9 @@ jobs:
           # Run the scan with twistcli pushing the results to the Prisma Cloud console. --details returns all vulnerabilities & compliance
           # issues rather than just summaries. -address points to our Prisma Cloud console -u and -p provide credentials for the console.
           # These creds only need the CI User role. Finally, we provide the name of the image we built with 'docker build', above.
-          ./twistcli images scan -address $TL_CONSOLE_URL -u $TL_USER -p $TL_PASS --containerized --details $CONTAINER_IMAGE
+          ls -an
+          uname -a          
+          ./twistcli images scan -address $TL_CONSOLE_URL -u $TL_USER -p $TL_PASS --containerized $CONTAINER_IMAGE
           # Add --vulnerability-threshold and/or --compliance-threshold to this command to fail builds based on the thresholds. See twistcli
           # documentation for more details.
  # add any additional jobs/steps needed to test the image, push to a registry, etc. 
