@@ -26,6 +26,7 @@ jobs:
         # ...and ensure it's executable.
         sudo chmod a+x ./twistcli
         echo ===== Twistcli ready =====
+        ./twistcli
      
      # - name: Build and tag the image
      # run: docker build -t $CONTAINER_IMAGE .
