@@ -43,6 +43,8 @@ jobs:
           # documentation for more details.
  # add any additional jobs/steps needed to test the image, push to a registry, etc. 
 
+    - name: Docker login
+      run: docker login --username ${{ secrets.DOCKER_USERNAME }} --password ${{ secrets.DOCKER_PASSWORD }}
     - name: Push the image to Docker Hub
       run: docker push $CONTAINER_IMAGE
     
