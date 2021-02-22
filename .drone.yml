@@ -46,7 +46,7 @@ steps:
 #  settings:
 #    urls: https://52.78.4.73:8083/api/v1/coderepos/webhook/G0NmFXKHWfKK0S4_PlhywzqVaeo=
 
-- name: publishhttps://github.com/nancom21/kjn-test-drone3/blob/main/.drone.yml
+- name: publish
   image: plugins/docker
   settings:
     username: 
