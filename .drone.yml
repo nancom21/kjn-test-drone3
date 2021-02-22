@@ -26,7 +26,7 @@ steps:
     webhook: 
       from_secret: slack_webhook
     channel: naver-kjn-drone
-      username: nancom21@naver.com
+    username: nancom21@naver.com
     template: >
       {{#success build.status}}
         build {{build.number}} status: *{{build.status}}*
