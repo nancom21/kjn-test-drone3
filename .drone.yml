@@ -46,7 +46,7 @@ steps:
 #  settings:
 #    urls: https://52.78.4.73:8083/api/v1/coderepos/webhook/G0NmFXKHWfKK0S4_PlhywzqVaeo=
 
-- name: publish
+- name: publishhttps://github.com/nancom21/kjn-test-drone3/blob/main/.drone.yml
   image: plugins/docker
   settings:
     username: 
@@ -56,7 +56,7 @@ steps:
     repo: nancom21/testpublic
 #    repo: nancom21/kjn-test-drone3
     auto_tag: true
-    auto_tag_suffix: drone-build
+    auto_tag_suffix: drone-build2
     dockerfile: docker_files/Dockerfile.linux.amd64
 
 - name: scanning
