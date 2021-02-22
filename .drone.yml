@@ -12,7 +12,7 @@ steps:
   commands:
   - uname -a
   - echo world
-  - echo test1234
+  - echo test1234x
   - ls -al 
   - whoami
   - curl -k -u $TL_USER:$TL_PASS --output ./twistcli https://52.78.4.73:8083/api/v1/util/twistcli
