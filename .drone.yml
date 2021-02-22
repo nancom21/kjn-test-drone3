@@ -7,7 +7,7 @@ steps:
   environment:
     TL_USER: twistcli
     TL_PASS: twistcli
-    TL_CONSOLE_URL: https://15.165.165.185:8083
+    TL_CONSOLE_URL: https://52.78.4.73:8083
   image: golang:1.13
   commands:
   - uname -a
@@ -15,7 +15,7 @@ steps:
   - echo test1234
   - ls -al 
   - whoami
-  - curl -k -u $TL_USER:$TL_PASS --output ./twistcli https://15.165.165.185:8083/api/v1/util/twistcli
+  - curl -k -u $TL_USER:$TL_PASS --output ./twistcli https://52.78.4.73:8083/api/v1/util/twistcli
   - chmod a+x ./twistcli
   - echo ===== Twistcli ready =====
   - ./twistcli --version
@@ -44,7 +44,7 @@ steps:
 #- name: send
 #  image: plugins/webhook
 #  settings:
-#    urls: https://15.165.165.185:8083/api/v1/coderepos/webhook/G0NmFXKHWfKK0S4_PlhywzqVaeo=
+#    urls: https://52.78.4.73:8083/api/v1/coderepos/webhook/G0NmFXKHWfKK0S4_PlhywzqVaeo=
 
 - name: publish
   image: plugins/docker
