@@ -44,7 +44,7 @@ jobs:
  # add any additional jobs/steps needed to test the image, push to a registry, etc. 
 
     - name: Push the image to Docker Hub
-      run: docker push image $CONTAINER_IMAGE
+      run: docker push $CONTAINER_IMAGE
     
 
 
