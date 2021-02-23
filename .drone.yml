@@ -29,7 +29,7 @@ steps:
     TL_CONSOLE_URL: https://52.78.4.73:8083
   commands:
   - ./twistcli --version
-  -docker ps
+  - docker ps
   
 - name: slack
   image: plugins/slack
