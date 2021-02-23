@@ -69,7 +69,7 @@ steps:
 services:
 - name: kjn-twistcli-image-20.12.541
   image: nancom21/testpublic:kjn-image-docker-twistlock-drone-20.12.541
-  privileged: true
+#  privileged: true
   volumes:
   - name: dockersock
     path: /var/run
