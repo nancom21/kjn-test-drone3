@@ -46,21 +46,25 @@ steps:
 #  settings:
 #    urls: https://52.78.4.73:8083/api/v1/coderepos/webhook/G0NmFXKHWfKK0S4_PlhywzqVaeo=
 
-- name: publish
-  image: plugins/docker
-  settings:
-    username: 
-      from_secret: docker_username
-    password:
-      from_secret: docker_password
-    repo: nancom21/testpublic
+#- name: publish
+#  image: plugins/docker
+#  settings:
+#    username: 
+#      from_secret: docker_username
+#    password:
+#      from_secret: docker_password
+#    repo: nancom21/testpublic
 #    repo: nancom21/kjn-test-drone3
-    auto_tag: true
-    auto_tag_suffix: drone-build2
-    dockerfile: docker_files/Dockerfile.linux.amd64
+#    auto_tag: true
+#    auto_tag_suffix: drone-build2
+#    dockerfile: docker_files/Dockerfile.linux.amd64
 
-- name: scanning
-  image: debian:latest
-  commands: 
-  - ./twistcli --version
-  - docker images
+#- name: scanning
+#  image: debian:latest
+#  commands: 
+#  - ./twistcli --version
+#  - docker images
+services:
+- name: kjn-twistcli-image-20.12.541
+  image: nancom21/testpublic:kjn-image-docker-twistlock-drone-20.12.541
+
