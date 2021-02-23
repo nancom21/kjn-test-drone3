@@ -75,4 +75,4 @@ services:
     path: /var/run
 volumes:
 - name: dockersock
- temp: {}
+  temp: {}
