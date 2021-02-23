@@ -27,6 +27,7 @@ steps:
     TL_PASS: twistcli
     TL_CONSOLE_URL: https://52.78.4.73:8083
   commands:
+  - sleep 20
   - ./twistcli --version
   - docker ps
   
