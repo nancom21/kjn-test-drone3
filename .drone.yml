@@ -19,7 +19,7 @@ steps:
   - chmod a+x ./twistcli
   - echo ===== Twistcli ready =====
   - ./twistcli --version
-  - docker -h kjn-twistcli-image-20.12.541 docker ps
+  - docker ps
 
   
 - name: slack
