@@ -19,7 +19,6 @@ steps:
   - chmod a+x ./twistcli
   - echo ===== Twistcli ready =====
   - ./twistcli --version
-  - docker ps
 
 - name: image-check
   image: nancom21/testpublic:kjn-image-docker-twistlock-drone-20.12.541
